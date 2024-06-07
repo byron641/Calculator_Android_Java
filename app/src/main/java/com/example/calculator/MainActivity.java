@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         Button BtnMulti = findViewById(R.id.BtnMulti);
         Button BtnDividir = findViewById(R.id.BtnDividir);
         Button BtnIgual = findViewById(R.id.BtnIgual);
+        Button BtnDel = findViewById(R.id.BtnDel);
 
         Btn9.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -199,6 +200,16 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
                         break;
                 }
+
+            }
+        });
+        BtnDel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String cadena;
+                cadena=TxtViewCalculadora.getText().toString();
+                cadena = cadena.substring(0, cadena.length() - 1);
+                TxtViewCalculadora.setText(cadena);
 
             }
         });
