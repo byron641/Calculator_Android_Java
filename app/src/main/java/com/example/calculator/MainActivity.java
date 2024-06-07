@@ -3,6 +3,7 @@ package com.example.calculator;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     String temp, Soperacion;
     int Temporal, operacion;
     TextView TxtViewCalculadora, TxtViewOperacion;
+    Switch SwitchMain;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         TxtViewCalculadora = findViewById(R.id.TxtViewCalculadora);
         TxtViewCalculadora.setText(String.valueOf(Temporal));
         TxtViewOperacion = findViewById(R.id.TextViewOperacion);
+        SwitchMain = findViewById(R.id.SwitchMain);
         Button Btn9 = findViewById(R.id.Btn9);
         Button Btn8 = findViewById(R.id.Btn8);
         Button Btn7 = findViewById(R.id.Btn7);
@@ -213,5 +216,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        //SwitchMain.setOnCheckedChangeListener();
+
     }
 }
